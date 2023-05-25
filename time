@@ -1,0 +1,26 @@
+import time
+import os
+
+def pomodoro():
+    while True:
+        for i in range(4):
+            # 25 分钟工作时间
+            print("Time to work!")
+            for j in range(25*60):
+                time.sleep(1)
+            os.system("say 'Time is up!'")
+            
+            # 5 分钟休息时间
+            print("Time for a break!")
+            for j in range(5*60):
+                time.sleep(1)
+            os.system("say 'Break is over!'")
+        
+        # 15 分钟长休息
+        print("Time for a long break!")
+        for j in range(15*60):
+            time.sleep(1)
+        os.system("say 'Long break is over!'")
+
+# 启动番茄钟
+pomodoro()
